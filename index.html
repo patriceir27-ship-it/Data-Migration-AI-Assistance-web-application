@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataFlow AI | Smart Data Migration</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-database"></i>
+                <span>DataFlow<span class="ai-text">AI</span></span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+                <a href="#features" class="nav-link"><i class="fas fa-star"></i> Features</a>
+                <a href="#migrate" class="nav-link"><i class="fas fa-exchange-alt"></i> Migrate</a>
+                <a href="#dashboard" class="nav-link"><i class="fas fa-chart-bar"></i> Dashboard</a>
+                <a href="#help" class="nav-link"><i class="fas fa-question-circle"></i> Help</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-login"><i class="fas fa-user"></i> Login</button>
+                <button class="btn-try-free">Try Free</button>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="animate__animated animate__fadeInDown">Smart Data Migration <span class="highlight">Made Easy</span></h1>
+                <p class="subtitle animate__animated animate__fadeInUp">AI-powered seamless data transfer between any devices and databases with intelligent storage analysis</p>
+                <div class="cta-buttons animate__animated animate__fadeInUp">
+                    <button class="btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Start Migration
+                    </button>
+                    <button class="btn-secondary btn-large">
+                        <i class="fas fa-play-circle"></i> Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-devices">
+                    <div class="device phone">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="device laptop">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="device database">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="connection-line"></div>
+                    <div class="connection-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Migration Selector -->
+    <section id="migrate" class="migration-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Migration Path</h2>
+            <p class="section-subtitle">Select source and destination for your data transfer</p>
+            
+            <div class="migration-selector">
+                <div class="source-section">
+                    <h3><i class="fas fa-arrow-up"></i> Source</h3>
+                    <div class="device-options">
+                        <div class="device-card active" data-type="phone">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Smartphone</span>
+                        </div>
+                        <div class="device-card" data-type="computer">
+                            <i class="fas fa-desktop"></i>
+                            <span>Computer</span>
+                        </div>
+                        <div class="device-card" data-type="database">
+                            <i class="fas fa-database"></i>
+                            <span>Database</span>
+                        </div>
+                        <div class="device-card" data-type="cloud">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Storage</span>
+                        </div>
+                    </div>
+                    
+                    <div class="connection-arrow">
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </div>
+                </div>
+                
+                <div class="destination-section">
+                    <h3><i class="fas fa-arrow-down"></i> Destination</h3>
+                    <div class="device-options">
+                        <div class="device-card" data-type="phone">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Smartphone</span>
+                        </div>
+                        <div class="device-card active" data-type="computer">
+                            <i class="fas fa-desktop"></i>
+                            <span>Computer</span>
+                        </div>
+                        <div class="device-card" data-type="database">
+                            <i class="fas fa-database"></i>
+                            <span>Database</span>
+                        </div>
+                        <div class="device-card" data-type="cloud">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Storage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database Type Selector -->
+            <div class="database-selector">
+                <h3>Database Type (Optional)</h3>
+                <div class="db-options">
+                    <select id="source-db-type" class="db-select">
+                        <option value="">Select Source DB Type</option>
+                        <option value="mysql">MySQL</option>
+                        <option value="postgresql">PostgreSQL</option>
+                        <option value="mongodb">MongoDB</option>
+                        <option value="sqlite">SQLite</option>
+                        <option value="oracle">Oracle</option>
+                        <option value="sqlserver">SQL Server</option>
+                    </select>
+                    
+                    <select id="dest-db-type" class="db-select">
+                        <option value="">Select Destination DB Type</option>
+                        <option value="mysql">MySQL</option>
+                        <option value="postgresql">PostgreSQL</option>
+                        <option value="mongodb">MongoDB</option>
+                        <option value="sqlite">SQLite</option>
+                        <option value="oracle">Oracle</option>
+                        <option value="sqlserver">SQL Server</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- File Upload/Connection -->
+            <div class="connection-setup">
+                <div class="source-connection">
+                    <h4>Source Connection</h4>
+                    <div class="connection-inputs">
+                        <input type="text" placeholder="IP Address / URL" class="input-field">
+                        <input type="text" placeholder="Port (Optional)" class="input-field">
+                        <button class="btn-connect"><i class="fas fa-plug"></i> Connect</button>
+                    </div>
+                    <div class="file-upload">
+                        <input type="file" id="file-input" multiple style="display: none;">
+                        <label for="file-input" class="upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop files or click to browse</p>
+                            <span class="file-info">Supports all file types</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="dest-connection">
+                    <h4>Destination Connection</h4>
+                    <div class="connection-inputs">
+                        <input type="text" placeholder="IP Address / URL" class="input-field">
+                        <input type="text" placeholder="Port (Optional)" class="input-field">
+                        <button class="btn-connect"><i class="fas fa-plug"></i> Connect</button>
+                    </div>
+                    <div class="storage-info">
+                        <div class="storage-bar">
+                            <div class="storage-fill" style="width: 65%;"></div>
+                        </div>
+                        <div class="storage-details">
+                            <span>Available: 350GB / 1TB</span>
+                            <span class="storage-percent">65% used</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Migration Settings -->
+            <div class="migration-settings">
+                <h3><i class="fas fa-cog"></i> Migration Settings</h3>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span>Verify Data Integrity</span>
+                    </div>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span>Compress Files</span>
+                    </div>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <span>Encrypt Data</span>
+                    </div>
+                    <div class="setting-item">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <span>Delete after Migration</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Migration Button -->
+            <div class="migration-action">
+                <button class="btn-migrate" id="startMigration">
+                    <i class="fas fa-sync-alt"></i> Start Smart Migration
+                    <span class="ai-badge">AI-Powered</span>
+                </button>
+                <div class="capacity-check">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Storage capacity verified ✓</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Dashboard -->
+    <section class="progress-section">
+        <div class="container">
+            <h2 class="section-title">Migration Progress</h2>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress-stats">
+                        <div class="stat">
+                            <span class="stat-label">Progress</span>
+                            <span class="stat-value" id="progressPercent">0%</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Speed</span>
+                            <span class="stat-value" id="speedValue">0 MB/s</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Time Left</span>
+                            <span class="stat-value" id="timeLeft">--:--</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Files</span>
+                            <span class="stat-value" id="filesCount">0/0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="file-list">
+                    <div class="file-item completed">
+                        <i class="fas fa-file-image"></i>
+                        <span>photos.zip</span>
+                        <span class="file-size">2.4 GB</span>
+                        <i class="fas fa-check success-icon"></i>
+                    </div>
+                    <div class="file-item in-progress">
+                        <i class="fas fa-file-video"></i>
+                        <span>videos.mp4</span>
+                        <span class="file-size">4.7 GB</span>
+                        <div class="mini-progress">
+                            <div class="mini-fill" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                    <div class="file-item pending">
+                        <i class="fas fa-file-archive"></i>
+                        <span>backup.rar</span>
+                        <span class="file-size">1.2 GB</span>
+                        <i class="fas fa-clock pending-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose DataFlow AI?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon ai-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Intelligent storage assessment and optimal migration path selection</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon secure-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Military-Grade Security</h3>
+                    <p>End-to-end encryption and secure data transfer protocols</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon speed-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Multi-threaded transfers with compression for maximum speed</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon universal-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <h3>Universal Compatibility</h3>
+                    <p>Connect any device, OS, or database system seamlessly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-database"></i>
+                        <span>DataFlow<span class="ai-text">AI</span></span>
+                    </div>
+                    <p>Smart data migration for the modern world</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Support</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Supported Platforms</h4>
+                    <a href="#">Android</a>
+                    <a href="#">iOS</a>
+                    <a href="#">Windows</a>
+                    <a href="#">macOS</a>
+                    <a href="#">Linux</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Databases</h4>
+                    <a href="#">MySQL</a>
+                    <a href="#">PostgreSQL</a>
+                    <a href="#">MongoDB</a>
+                    <a href="#">SQLite</a>
+                    <a href="#">Oracle</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 DataFlow AI. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
